@@ -18,7 +18,9 @@ import { Animal } from './animal.model';
     <input type="text" #animalAge>
     <br>
     <label>Sex</label>
-    <input type="text" #animalSex>
+    <!-- <input type="text" #animalSex> -->
+    <input name="sex" type="radio" (change)="animalSex = 'female'">Female
+    <input name="sex" type="radio" (change)="animalSex = 'male'">Male
     <br>
     <label>Diet</label>
     <input type="text" #animalDiet>
@@ -35,7 +37,7 @@ import { Animal } from './animal.model';
     <label>Dislikes</label>
     <input type="text" #animalDislikes>
     <br>
-    <button (click)="submitForm(animalSpecies.value,animalName.value,animalAge.value,animalSex.value,animalDiet.value,animalLocation.value,animalCaretakers.value,animalLikes.value,animalDislikes.value); exitForm(); getConfirm(animalName.value); animalSpecies.value='';animalName.value='';animalAge.value='';animalSex.value='';animalDiet.value='';animalLocation.value='';animalCaretakers.value='';animalLikes.value='';animalDislikes.value='';">Add</button>
+    <button (click)="submitForm(animalSpecies.value,animalName.value,animalAge.value,animalSex,animalDiet.value,animalLocation.value,animalCaretakers.value,animalLikes.value,animalDislikes.value); exitForm(); getConfirm(animalName.value); animalSpecies.value='';animalName.value='';animalAge.value='';animalSex='';animalDiet.value='';animalLocation.value='';animalCaretakers.value='';animalLikes.value='';animalDislikes.value='';">Add</button>
   </div>
   <div *ngIf="newAnimalConfirm">
     <h3>{{newAnimalConfirm}}</h3>
