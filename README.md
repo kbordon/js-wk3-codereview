@@ -3,7 +3,7 @@
 #### By Kimberly Bordon
 
 ## Description
-_This is an application that will allow zoo caretakers to track the animals. The app will allow the user to view all animals immediately, or filter by their desired parameter. It will allow the caretaker to enter newly admitted animals through a form, recording a given list of details. The user can also edit an existing record._
+_This is an application that will allow zoo caretakers to track their zoo's animals. The app will allow the user to view all animals immediately, or filter by their desired parameter. It will allow the caretaker to enter newly admitted animals through a form, recording a given list of details. The user can also edit an existing record._
 
 ## Specs
 | Behavior | Input Example | Output Example |

@@ -6,7 +6,8 @@ import { Animal } from './animal.model';
   template: `
   <h1>ANIMALS</h1>
   <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
-  <animal-list [childAnimalList]="masterAnimalList"></animal-list>
+  <edit-animal [childSelectedAnimal]="selectedAnimal" (finishEditSender)="finishEdit()"></edit-animal>
+  <animal-list [childAnimalList]="masterAnimalList" (editSender)="editAnimal($event)"></animal-list>
   `
 })
 
@@ -20,5 +21,13 @@ export class AppComponent {
 
   addAnimal(newAnimalFromChild){
     this.masterAnimalList.push(newAnimalFromChild);
+  }
+
+  editAnimal(clickedAnimal){
+    this.selectedAnimal = clickedAnimal;
+  }
+
+  finishEdit(){
+    this.selectedAnimal = null;
   }
 }
