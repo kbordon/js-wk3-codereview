@@ -15,12 +15,12 @@ import { Animal } from './animal.model';
     <input type="text" #animalName>
     <br>
     <label>Age</label>
-    <input type="text" #animalAge>
+    <input type="number" #animalAge>
     <br>
     <label>Sex</label>
     <!-- <input type="text" #animalSex> -->
-    <input name="sex" type="radio" (change)="animalSex = 'female'">Female
-    <input name="sex" type="radio" (change)="animalSex = 'male'">Male
+    <input name="sex" type="radio" (change)="animalSex='female'">Female
+    <input name="sex" type="radio" (change)="animalSex='male'">Male
     <br>
     <label>Diet</label>
     <input type="text" #animalDiet>
@@ -29,7 +29,7 @@ import { Animal } from './animal.model';
     <input type="text" #animalLocation>
     <br>
     <label>Number of Caretakers</label>
-    <input type="text" #animalCaretakers>
+    <input type="number" #animalCaretakers>
     <br>
     <label>Likes</label>
     <input type="text" #animalLikes>
