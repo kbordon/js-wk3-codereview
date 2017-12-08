@@ -7,8 +7,8 @@ import { Animal } from './animal.model';
   <h1>ANIMALS</h1>
   <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
   <edit-animal [childSelectedAnimal]="selectedAnimal" (finishEditSender)="finishEdit()"></edit-animal>
-  <animal-filter (filterSender)="changeFilter($event)"></animal-filter>
-  <animal-list [childAnimalList]="masterAnimalList" [childFilterAnimal]="masterFilterAnimal" (editSender)="editAnimal($event)"></animal-list>
+  <animal-filter (filterAgeSender)="changeFilter($event)" (filterDietSender)="changeDietFilter($event)"></animal-filter>
+  <animal-list [childAnimalList]="masterAnimalList" [childFilterDiet]="masterFilterDiet" [childFilterAnimal]="masterFilterAnimal" (editSender)="editAnimal($event)"></animal-list>
   `
 })
 
@@ -20,6 +20,7 @@ export class AppComponent {
   masterAnimalList: Animal[] = [this.animal1, this.animal2, this.animal3];
   selectedAnimal = null;
   masterFilterAnimal: string = "all";
+  masterFilterDiet: string[] =["Carnivore","Herbivore", "Omnivore"];
 
   addAnimal(newAnimalFromChild){
     this.masterAnimalList.push(newAnimalFromChild);
@@ -36,5 +37,10 @@ export class AppComponent {
   changeFilter(filter){
     this.masterFilterAnimal = filter;
     console.log(filter);
+  }
+
+  changeDietFilter(dietFilter){
+    this.masterFilterDiet = dietFilter;
+    console.log(dietFilter);
   }
 }

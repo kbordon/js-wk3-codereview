@@ -4,7 +4,7 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'animal-list',
   template: `
-    <div *ngFor="let currentAnimal of childAnimalList | age:childFilterAnimal">
+    <div *ngFor="let currentAnimal of childAnimalList | age:childFilterAnimal | diet:childFilterDiet">
       <h2>{{currentAnimal.name}}</h2>
       <h3>{{currentAnimal.species}}</h3>
       <p>{{currentAnimal.age}}</p>
@@ -21,6 +21,7 @@ import { Animal } from './animal.model';
 
 export class AnimalListComponent{
   @Input() childFilterAnimal: string;
+  @Input() childFilterDiet: string[];
   @Input() childAnimalList: Animal[];
   @Output() editSender = new EventEmitter();
 
