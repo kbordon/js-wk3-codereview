@@ -16,7 +16,7 @@ _This is an application that will allow zoo caretakers to track their zoo's anim
 ### Wishlist
 | Behavior | Input | Output |
 |-|-|-|
-| | | |
+| User can remove an animal that is no longer with the zoo. | User clicks "Remove" button on edit form. | Page shows window to confirm user truly wishes to remove the animal, or cancel. |
 
 * More wishlist items that aren't specs.
 
