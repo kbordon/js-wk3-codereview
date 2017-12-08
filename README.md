@@ -1,14 +1,17 @@
-#_template
-###  ( _..2017_)
+# Zookeeper
+### Animal Tracking Application for Angular Code Review (_12.08.2017_)
 #### By Kimberly Bordon
 
 ## Description
-_This is an application that will ..._
+_This is an application that will allow zoo caretakers to track the animals. The app will allow the user to view all animals immediately, or filter by their desired parameter. It will allow the caretaker to enter newly admitted animals through a form, recording a given list of details. The user can also edit an existing record._
 
 ## Specs
 | Behavior | Input Example | Output Example |
 |-|-|-|
-| | | |
+| The user can view all animals currently logged upon loading the app by default. | User goes to page. | Page displays a list of all animals. |
+| The user can view add a newly admitted animal. | User clicks "Add" button, and fills out a form that appears. | Page displays confirmation that animal was added, or should should return to view of all animals. |
+| The user can filter the animals being viewed by age, showing only young, or mature animals. | User selects "young" from drop-down menu. | Page displays list of only animals that are under 2 years old. |
+| The user can edit currently existing animals by clicking "Edit" or similar edit symbol on the specific animal. | User clicks "Edit." | Edit form appears as pop-up, and user can choose to exit the window to cancel or "Save Changes." |
 
 ### Wishlist
 | Behavior | Input | Output |
