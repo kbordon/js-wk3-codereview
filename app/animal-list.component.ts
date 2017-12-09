@@ -6,7 +6,11 @@ import { Animal } from './animal.model';
   template: `
     <div class="all-animals">
       <div class="animal-info" *ngFor="let currentAnimal of childAnimalList | age:childFilterAnimal | diet:childFilterDiet">
-        <div class="animal-text">
+      <div class="error-box" *ngIf="currentAnimal.errorMsg">
+        <h2>There are no animals that match your specifications.</h2>
+        <p>Adjust your filters appropriately.</p>
+      </div>
+        <div *ngIf="currentAnimal.name" class="animal-text">
           <p class="edit" (click)="editButtonClicked(currentAnimal)">EDIT</p>
           <h2>{{currentAnimal.name}}</h2>
           <p>Species: {{currentAnimal.species}}</p>
