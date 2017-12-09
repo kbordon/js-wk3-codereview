@@ -4,10 +4,10 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'new-animal',
   template: `
-  <button (click)="getForm()">Add</button>
+  <p class="button" (click)="getForm()">ADD</p>
   <div class="form-focus" *ngIf="newAnimal === true">
-    <p (click)="exitForm()">X</p>
-    <h2>Add Animal</h2>
+    <p class="button-close" (click)="exitForm()">X</p>
+    <h2>ADD</h2>
     <label>Species</label>
     <input type="text" #animalSpecies>
     <br>
@@ -40,7 +40,7 @@ import { Animal } from './animal.model';
     <label>Dislikes</label>
     <input type="text" #animalDislikes>
     <br>
-    <button (click)="submitForm(animalSpecies.value,animalName.value,animalAge.value,animalSex,animalDiet,animalLocation.value,animalCaretakers.value,animalLikes.value,animalDislikes.value); exitForm(); getConfirm(animalName.value); animalSpecies.value='';animalName.value='';animalAge.value='';animalSex='';animalDiet='';animalLocation.value='';animalCaretakers.value='';animalLikes.value='';animalDislikes.value='';">Add</button>
+    <p class="button" (click)="submitForm(animalSpecies.value,animalName.value,animalAge.value,animalSex,animalDiet,animalLocation.value,animalCaretakers.value,animalLikes.value,animalDislikes.value); exitForm(); getConfirm(animalName.value); animalSpecies.value='';animalName.value='';animalAge.value='';animalSex='';animalDiet='';animalLocation.value='';animalCaretakers.value='';animalLikes.value='';animalDislikes.value='';">SAVE</p>
   </div>
   <div *ngIf="newAnimalConfirm">
     <h3>{{newAnimalConfirm}}</h3>

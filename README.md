@@ -18,7 +18,12 @@ _This is an application that will allow zoo caretakers to track their zoo's anim
 |-|-|-|
 | User can remove an animal that is no longer with the zoo. | User clicks "Remove" button on edit form. | Page shows window to confirm user truly wishes to remove the animal, or cancel. |
 
-* More wishlist items that aren't specs.
+* Allow user to enter more data to form, such as medical conditions, or other special notes, or trainer names.
+* When no animals are shown, make a message visible to user so they be informed that their filters had no matches.
+* Better styling.
+* Edit form allows all details to be edited.
+* More filter options available for
+* Rearrange app component structure so that when either the edit form or add form appears, the change in focus is more apparent.
 
 
 ## Setup/Install
@@ -32,9 +37,7 @@ $ bower install
 ```
 
 #### Testing
-* If you would like to add any code to this project, and then test it, you can write your tests in the file `spec/doctor-spec.js`.
-* Alternatively, you can create your own test file in the same location as this file, and making sure the filename ends with the extension `-spec.js`.
-* In order to run tests, from the top level of the project folder, run this command in terminal: `$ npm test`
+* At this moment, there are no tests available for this repository.
 
 #### Running/Production
 * To build project, enter the following:

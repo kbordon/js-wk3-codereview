@@ -4,8 +4,8 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'app-root',
   template: `
-  <div [class]="viewUnFocus" class="wrapper">
-    <h1>Howl's Moving Zoo</h1>
+  <div class="wrapper">
+    <h1>BROOKHAVEN ZOO</h1>
     <new-animal (focusSender)="changeFocus()" (newAnimalSender)="addAnimal($event)"></new-animal>
     <edit-animal [childSelectedAnimal]="selectedAnimal" (finishEditSender)="finishEdit()"></edit-animal>
     <div class="view-wrapper">

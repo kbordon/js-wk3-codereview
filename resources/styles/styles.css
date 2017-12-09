@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Marcellus+SC');
 body {
   font-family: 'Lato', sans-serif;
-  height: 100vh;
 }
 
 h1, h2, h3, h4 {
   font-family: 'Marcellus SC', serif;
 }
+
+h1{
+  font-size: 80px;
+}
+
 .all-animals {
   height: 90vh;
   width: 80vw;
@@ -18,11 +22,11 @@ h1, h2, h3, h4 {
   display: flex;
   height: 350px;
   width: 900px;
-  background-color: peachpuff;
-  border: 1px solid black;
+  background-color: lightgreen;
   padding: 10px;
-  margin: 10px;
+  margin: 30px 10px;
   justify-content: space-around;
+  border-radius: 15px;
 }
 
 .animal-info img {
@@ -46,6 +50,11 @@ h1, h2, h3, h4 {
 .wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.wrapper h1 {
+  margin: 0;
 }
 
 .view-wrapper {
@@ -64,10 +73,51 @@ h1, h2, h3, h4 {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-  border: 1px dashed black;
+  border: 3px dashed black;
   width: 50%;
   min-height: 40%;
   resize: both;
   overflow: auto;
   filter: grayscale(0%);
+}
+
+.button {
+  width: 150px;
+  font-size: 25px;
+  background-color: lightgreen;
+  text-align: center;
+  padding: 5px 0px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: 1px solid black;
+}
+
+.button:hover{
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.button-close {
+  width: 20px;
+  height: 20px;
+  color: lightgray;
+  border-radius: 2px;
+  border: 1px solid red;
+  text-align: center;
+  padding: 2px;
+  align-self:flex-end;
+}
+
+.button-close:hover{
+  cursor: pointer;
+  background-color: red;
+  color: black;
+  border: 1px solid black;
+}
+
+
+
+.filter-form {
+  margin: 0 10px;
 }
