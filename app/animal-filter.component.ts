@@ -7,14 +7,12 @@ import { Animal } from './animal.model';
   <div class="filter-form">
     <h2>Filter Animals By:</h2>
     <p>Age</p>
-    <hr/>
     <select (change)="onChange($event.target.value)">
       <option value="all" selected="selected">All Ages</option>
       <option value="young">Young (less than 2 years)</option>
       <option value="mature">Mature (at least 2 years)</option>
     </select>
-    <p>Diet</p>
-    <hr/>
+    <p>Diet</p> 
     <input type="checkbox" checked (change)="meatDiet = $event.target.checked; dietFilter();">Meat
     <br>
     <input type="checkbox" checked (change)="plantDiet = $event.target.checked; dietFilter();">Plants
