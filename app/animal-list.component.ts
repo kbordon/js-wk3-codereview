@@ -22,7 +22,8 @@ import { Animal } from './animal.model';
           <p><span>Likes:</span> {{currentAnimal.likes}}</p>
           <p><span>Dislikes:</span> {{currentAnimal.dislikes}}</p>
         </div>
-        <img *ngIf="currentAnimal.hasImg === true" src={{currentAnimal.animalImg}}>
+        <img *ngIf="currentAnimal.animalImg" src={{currentAnimal.animalImg}}>
+        <div class="no-image" *ngIf="currentAnimal.animalImg === ''"> No Image Available</div>
       </div>
     </div>
   `

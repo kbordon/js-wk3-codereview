@@ -40,9 +40,10 @@ import { Animal } from './animal.model';
     <p>Dislikes:</p>
     <input type="text" #animalDislikes>
     <br>
-    <p>Has an Image:
-    <input name="image" type="checkbox" (change)="animalImg=$event.target.checked">
-    <p class="button" (click)="submitForm(animalSpecies.value,animalName.value,animalAge.value,animalSex,animalDiet,animalLocation.value,animalCaretakers.value,animalLikes.value,animalDislikes.value, animalImg); exitForm(); getConfirm(animalName.value); animalSpecies.value='';animalName.value='';animalAge.value='';animalSex='';animalDiet='';animalLocation.value='';animalCaretakers.value='';animalLikes.value='';animalDislikes.value='';">SAVE</p>
+    <p>Image URL (If none available, leave blank):
+    <!-- <input name="image" type="checkbox" (change)="animalImg=$event.target.checked">-->
+    <input type="text" #animalImg>
+    <p class="button" (click)="submitForm(animalSpecies.value,animalName.value,animalAge.value,animalSex,animalDiet,animalLocation.value,animalCaretakers.value,animalLikes.value,animalDislikes.value, animalImg.value); exitForm(); getConfirm(animalName.value); animalSpecies.value='';animalName.value='';animalAge.value='';animalSex='';animalDiet='';animalLocation.value='';animalCaretakers.value='';animalLikes.value='';animalDislikes.value='';animalImg.value='';">SAVE</p>
   </div>
   <div class="confirm-focus" *ngIf="newAnimalConfirm">
     <h3>{{newAnimalConfirm}}</h3>
