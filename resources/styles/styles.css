@@ -20,6 +20,7 @@ h1, h2, h3, h4 {
 h1{
   font-size: 80px;
   text-shadow: 1px 1px 3px gold;
+  /*text-shadow: ;*/
 }
 
 .all-animals {
@@ -33,7 +34,7 @@ h1{
 .animal-info {
   align-items: center;
   display: flex;
-  background-color: rgba(255,255,255, 0.9);
+  background-color: rgba(255,255,255, 0.95);
   padding: 15px;
   margin: 30px 30px;
   align-items: flex-start;
@@ -102,9 +103,9 @@ h1{
   filter: blur(5px) opacity(80%);
 }
 .form-focus {
-  position: absolute;
+  position: fixed;
   z-index: 9999;
-  top: 10%;
+  top: 2%;
   left: 25%;
   background-color: white;
   padding: 20px;
@@ -114,11 +115,12 @@ h1{
   border-bottom: 10px solid lightgray;
   border-right: 10px solid lightgray;
   width: 50%;
-  min-height: 40%;
+  height: auto;
   resize: both;
   overflow: auto;
   filter: grayscale(0%);
-  transition: top 0.5s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-focus p{
@@ -126,6 +128,9 @@ h1{
   margin-bottom: 5px;
 }
 
+.form-focus .button {
+  align-self: center;
+}
 .button {
   width: 150px;
   font-size: 25px;
@@ -236,7 +241,7 @@ h1{
 }
 
 .error-box {
-  min-width: 1000px;
+  width: %;
 }
 
 span {

@@ -5,7 +5,7 @@ import { Animal } from './animal.model';
   selector: 'app-root',
   template: `
   <div class="wrapper">
-    <h1 [class]="viewUnFocus">BROOKHAVEN ZOO</h1>
+    <h1>Brookhaven Zoo</h1>
     <new-animal [childViewUnFocus]="viewUnFocus" (focusSender)="changeFocus()" (newAnimalSender)="addAnimal($event)"></new-animal>
     <edit-animal [childSelectedAnimal]="selectedAnimal" (finishEditSender)="finishEdit()"></edit-animal>
     <div class="view-wrapper">
