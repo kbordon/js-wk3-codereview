@@ -49,20 +49,30 @@ h1{
   padding: 30px;
   display: flex;
   flex-direction: column;
+  padding-top: 5px;
 
+}
+
+.animal-text h2 {
+  margin: 0px;
+  font-size: 40px;
 }
 
 .animal-text p{
   font-size: 20px;
-  margin: 0 0;
+  margin: 1px 0;
+  margin-left: 20px;
+}
+
+.animal-text-label {
+ font-style: italic;
+ font-weight: lighter;
+ font-size: 18px !important;
+ margin-left: 0px !important;
 }
 
 .animal-info .edit-button {
   align-self: flex-end;
-}
-
-.edit-button {
-  
 }
 
 .wrapper {
@@ -115,16 +125,14 @@ h1{
   text-align: center;
   padding: 5px 0px;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
   box-shadow: 3px 3px black;
-  border: 0;
 }
 
 .button:hover{
   cursor: pointer;
   background-color: black;
   color: white;
-  box-shadow: 0 0;
 }
 
 .button-close {
@@ -148,11 +156,27 @@ h1{
   background-color: darkred;
 }
 
+.edit-button {
+  font-size: 18px !important;
+  background-color: palegoldenrod;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+  box-shadow: 3px 3px black;
+}
+
+.edit-button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
 .filter-form {
   width: 250px;
   margin: 0 10px;
-  padding: 10px;
-  background-color: rgba(240,230,140, 0.8);
+  padding: 25px;
+  background-color: rgba(240,230,140, 0.95);
 }
 
 .filter-form hr {
@@ -202,4 +226,9 @@ h1{
 
 .error-box {
   min-width: 1000px;
+}
+
+span {
+  font-weight: bold;
+  color: darkgoldenrod;
 }

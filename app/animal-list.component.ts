@@ -11,16 +11,16 @@ import { Animal } from './animal.model';
         <p>Adjust your filters appropriately.</p>
       </div>
         <div *ngIf="currentAnimal.name" class="animal-text">
-          <p class="edit" (click)="editButtonClicked(currentAnimal)">EDIT</p>
+          <p class="edit-button" (click)="editButtonClicked(currentAnimal)"><i class="tiny material-icons">edit</i>edit</p>
           <h2>{{currentAnimal.name}}</h2>
-          <p>Species: {{currentAnimal.species}}</p>
-          <p>Age: {{currentAnimal.age}}</p>
-          <p>Sex: {{currentAnimal.sex}}</p>
-          <p>Diet: {{currentAnimal.diet}}</p>
-          <p>Location: {{currentAnimal.location}}</p>
-          <p>Number of caretakers: {{currentAnimal.caretakers}}</p>
-          <p>Likes: {{currentAnimal.likes}}</p>
-          <p>Dislikes: {{currentAnimal.dislikes}}</p>
+          <p><span>Species:</span> {{currentAnimal.species}}</p>
+          <p><span>Age:</span> {{currentAnimal.age}}</p>
+          <p><span>Sex:</span> {{currentAnimal.sex}}</p>
+          <p><span>Diet:</span> {{currentAnimal.diet}}</p>
+          <p><span>Location:</span> {{currentAnimal.location}}</p>
+          <p><span>Number of caretakers:</span> {{currentAnimal.caretakers}}</p>
+          <p><span>Likes:</span> {{currentAnimal.likes}}</p>
+          <p><span>Dislikes:</span> {{currentAnimal.dislikes}}</p>
         </div>
         <img *ngIf="currentAnimal.hasImg === true" src={{currentAnimal.animalImg}}>
       </div>
