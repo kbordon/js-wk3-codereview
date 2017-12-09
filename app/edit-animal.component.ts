@@ -4,7 +4,8 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'edit-animal',
   template:`
-  <div *ngIf="childSelectedAnimal">
+  <div class="form-focus" *ngIf="childSelectedAnimal">
+    <p (click)="exitEditForm()">X</p>
     <h3>Edit:{{childSelectedAnimal.name}}</h3>
     <!-- For some reason, ngModel shortcut not recognized. Switched to long-hand syntax for time being.
       <input [(ngModel)]="childSelectedAnimal.name">
@@ -13,7 +14,6 @@ import { Animal } from './animal.model';
       <br>
       <input [(ngModel)]="childSelectedAnimal.caretakers">
       -->
-      <p (click)="exitEditForm()">X</p>
       <p>Name</p>
       <input [value]="childSelectedAnimal.name" (input)="childSelectedAnimal.name = $event.target.value">
       <p>Age</p>

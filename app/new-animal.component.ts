@@ -5,7 +5,7 @@ import { Animal } from './animal.model';
   selector: 'new-animal',
   template: `
   <button (click)="getForm()">Add</button>
-  <div class="new-form" *ngIf="newAnimal === true">
+  <div class="form-focus" *ngIf="newAnimal === true">
     <p (click)="exitForm()">X</p>
     <h2>Add Animal</h2>
     <label>Species</label>
@@ -51,10 +51,13 @@ import { Animal } from './animal.model';
 })
 
 export class NewAnimalComponent {
+  @Output() focusSender = new EventEmitter();
   @Output() newAnimalSender = new EventEmitter();
 
   newAnimal = false;
   newAnimalConfirm = null;
+
+
 
   submitForm(species, name, age, sex, diet, location, caretakers, likes, dislikes ){
     let newAnimalToAdd: Animal = new Animal(species, name, age, sex, diet, location, caretakers, likes, dislikes);
@@ -62,10 +65,12 @@ export class NewAnimalComponent {
   }
   getForm(){
     this.newAnimal = true;
+    this.focusSender.emit();
   }
 
   exitForm(){
     this.newAnimal = false;
+    this.focusSender.emit();
   }
 
   getConfirm(name){

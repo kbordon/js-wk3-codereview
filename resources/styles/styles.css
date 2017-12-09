@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Marcellus+SC');
+body {
+  font-family: 'Lato', sans-serif;
+  height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Marcellus SC', serif;
+}
+.all-animals {
+  height: 90vh;
+  width: 80vw;
+  overflow-y: scroll;
+}
+
+.animal-info {
+  align-items: center;
+  display: flex;
+  height: 350px;
+  width: 900px;
+  background-color: peachpuff;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  justify-content: space-around;
+}
+
+.animal-info img {
+  height: 300px;
+  width: auto;
+}
+
+.animal-text {
+  flex-basis: 2;
+}
+
+.animal-text p{
+  font-size: 20px;
+  margin: 0 20px;
+}
+
+.animal-info .edit {
+  align-self: flex-end;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.view-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.unfocus {
+  filter: grayscale(80%);
+}
+.form-focus {
+  position: absolute;
+  z-index: 9999;
+  top: 20%;
+  left: 25%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px dashed black;
+  width: 50%;
+  min-height: 40%;
+  resize: both;
+  overflow: auto;
+  filter: grayscale(0%);
+}
