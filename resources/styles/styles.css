@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Marcellus+SC');
+html {
+  height: 100vh;
+}
 body {
+  background-image: url("/resources/img/zoobg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
   font-family: 'Lato', sans-serif;
 }
 
@@ -9,38 +19,42 @@ h1, h2, h3, h4 {
 
 h1{
   font-size: 80px;
+  text-shadow: 1px 1px 3px gold;
 }
 
 .all-animals {
-  height: 90vh;
-  width: 80vw;
+  /*height: 90vh;
+  width: 80vw;*/
+  display: flex;
+  flex-direction:column;
   overflow-y: scroll;
 }
 
 .animal-info {
   align-items: center;
   display: flex;
-  height: 350px;
-  width: 900px;
-  background-color: lightgreen;
-  padding: 10px;
-  margin: 30px 10px;
+  background-color: rgba(255,255,255, 0.9);
+  padding: 15px;
+  margin: 30px 30px;
+  align-items: flex-start;
   justify-content: space-around;
-  border-radius: 15px;
 }
 
 .animal-info img {
-  height: 300px;
-  width: auto;
+  width: 50%;
 }
 
-.animal-text {
-  flex-basis: 2;
+.animal-text{
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .animal-text p{
   font-size: 20px;
-  margin: 0 20px;
+  margin: 0 0;
 }
 
 .animal-info .edit {
@@ -59,65 +73,125 @@ h1{
 
 .view-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .unfocus {
-  filter: grayscale(80%);
+  filter: blur(5px) opacity(80%);
 }
 .form-focus {
   position: absolute;
   z-index: 9999;
-  top: 20%;
+  top: 10%;
   left: 25%;
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-  border: 3px dashed black;
+  border-top: 10px solid gray;
+  border-left: 10px solid gray;
+  border-bottom: 10px solid lightgray;
+  border-right: 10px solid lightgray;
   width: 50%;
   min-height: 40%;
   resize: both;
   overflow: auto;
   filter: grayscale(0%);
+  transition: top 0.5s ease;
+}
+
+.form-focus p{
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .button {
   width: 150px;
   font-size: 25px;
-  background-color: lightgreen;
+  background-color: palegoldenrod;
   text-align: center;
   padding: 5px 0px;
   font-weight: bold;
   letter-spacing: 2px;
-  border: 1px solid black;
+  box-shadow: 3px 3px black;
+  border: 0;
 }
 
 .button:hover{
   cursor: pointer;
   background-color: black;
   color: white;
+  box-shadow: 0 0;
 }
 
 .button-close {
   width: 20px;
   height: 20px;
   color: lightgray;
+  background-color: red;
   border-radius: 2px;
-  border: 1px solid red;
   text-align: center;
   padding: 2px;
-  align-self:flex-end;
+  right: 0;
+  top: 0;
+  position: absolute;
+  margin-top: 15px;
+  margin-right: 20px;
 }
 
 .button-close:hover{
   cursor: pointer;
-  background-color: red;
   color: black;
-  border: 1px solid black;
+  background-color: darkred;
 }
 
-
-
 .filter-form {
+  width: 250px;
   margin: 0 10px;
+  padding: 10px;
+  background-color: rgba(240,230,140, 0.8);
+}
+
+.filter-form hr {
+  margin-top: 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid rgba(0,0,0, 0.5);
+}
+
+.filter-form h2 {
+  font-size: 28px;
+}
+
+.filter-form p {
+  margin-bottom: 0;
+  font-size: 24px;
+}
+
+.filter-form select {
+  width: 100%;
+  font-size: 18px;
+}
+
+.filter-form input[type="checkbox"] {
+  font-size: 18px;
+}
+
+.confirm-focus {
+  position: absolute;
+  z-index: 9999;
+  top: 10%;
+  left: 25%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border-top: 10px solid gray;
+  border-left: 10px solid gray;
+  border-bottom: 10px solid lightgray;
+  border-right: 10px solid lightgray;
+  width: 50%;
+  min-height: 40%;
+  filter: grayscale(0%);
+  transition: top 0.5s ease;
+
 }

@@ -6,8 +6,8 @@ import { Animal } from './animal.model';
   template: `
     <div class="all-animals">
       <div class="animal-info" *ngFor="let currentAnimal of childAnimalList | age:childFilterAnimal | diet:childFilterDiet">
-        <img src={{currentAnimal.animalImg}}>
         <div class="animal-text">
+          <p class="edit" (click)="editButtonClicked(currentAnimal)">EDIT</p>
           <h2>{{currentAnimal.name}}</h2>
           <p>Species: {{currentAnimal.species}}</p>
           <p>Age: {{currentAnimal.age}}</p>
@@ -18,7 +18,7 @@ import { Animal } from './animal.model';
           <p>Likes: {{currentAnimal.likes}}</p>
           <p>Dislikes: {{currentAnimal.dislikes}}</p>
         </div>
-        <p class="edit" (click)="editButtonClicked(currentAnimal)">EDIT</p>
+        <img *ngIf="currentAnimal.hasImg === true" src={{currentAnimal.animalImg}}>
       </div>
     </div>
   `

@@ -5,8 +5,8 @@ import { Animal } from './animal.model';
   selector: 'app-root',
   template: `
   <div class="wrapper">
-    <h1>BROOKHAVEN ZOO</h1>
-    <new-animal (focusSender)="changeFocus()" (newAnimalSender)="addAnimal($event)"></new-animal>
+    <h1 [class]="viewUnFocus">BROOKHAVEN ZOO</h1>
+    <new-animal [childViewUnFocus]="viewUnFocus" (focusSender)="changeFocus()" (newAnimalSender)="addAnimal($event)"></new-animal>
     <edit-animal [childSelectedAnimal]="selectedAnimal" (finishEditSender)="finishEdit()"></edit-animal>
     <div class="view-wrapper">
       <animal-filter (filterAgeSender)="changeFilter($event)" (filterDietSender)="changeDietFilter($event)"></animal-filter>
@@ -17,10 +17,10 @@ import { Animal } from './animal.model';
 })
 
 export class AppComponent {
-  animal1: Animal = new Animal("Artic Fox", "Moon", 1, "Female", "Carnivore", "Northern Trail", 5, "Cool shade", "Loud noises");
-  animal2: Animal = new Animal("Ocelot", "Prince", 4, "Male", "Carnivore", "Tropical Rain Forest Building", 6, "Lying in in sunshine", "Toys that are not rope-based")
-  animal3: Animal = new Animal("Northwest Black Tailed Deer", "Tinkerbell", 8, "Female", "Herbivore", "Northern Trail", 2, "Delicate roots and leaves", "Loud Noises");
-  animal4: Animal = new Animal("Human", "Jason", 50, "Male", "Omnivore", "Camp Crystal", 13, "Red rum", "Peace and quiet");
+  animal1: Animal = new Animal("Artic Fox", "Moon", 1, "Female", "Carnivore", "Northern Trail", 5, "Cool shade", "Loud noises", true);
+  animal2: Animal = new Animal("Ocelot", "Prince", 4, "Male", "Carnivore", "Tropical Rain Forest Building", 6, "Lying in in sunshine", "Toys that are not rope-based", true)
+  animal3: Animal = new Animal("Northwest Black Tailed Deer", "Tinkerbell", 8, "Female", "Herbivore", "Northern Trail", 2, "Delicate roots and leaves", "Loud Noises", true);
+  animal4: Animal = new Animal("Human", "Jason", 50, "Male", "Omnivore", "Camp Crystal", 13, "Red rum", "Peace and quiet", true);
 
   masterAnimalList: Animal[] = [this.animal1, this.animal2, this.animal3, this.animal4];
   selectedAnimal = null;
