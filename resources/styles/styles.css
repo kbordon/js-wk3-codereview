@@ -122,6 +122,14 @@ h1{
   flex-direction: column;
 }
 
+.form-focus h2 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin: 0;
+  margin-left: 20px;
+}
+
 .form-focus p{
   margin-top: 5px;
   margin-bottom: 5px;
@@ -152,24 +160,24 @@ h1{
 }
 
 .button-close {
-  width: 20px;
-  height: 20px;
+  /*width: 20px;
+  height: 20px;*/
   color: lightgray;
   background-color: red;
-  border-radius: 2px;
+  /*border-radius: 2px;*/
   text-align: center;
-  padding: 2px;
-  right: 0;
+  padding: 10px;
+  margin: 0 !important;
+  /*right: 0;
   top: 0;
   position: absolute;
   margin-top: 15px;
-  margin-right: 20px;
+  margin-right: 20px;*/
 }
 
 .button-close:hover{
   cursor: pointer;
   color: black;
-  background-color: darkred;
 }
 
 .edit-button {
@@ -250,4 +258,25 @@ h1{
 span {
   font-weight: bold;
   color: darkgoldenrod;
+}
+
+.form-body {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.body-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  /*justify-content: flex-start;*/
+}
+
+.form-top {
+  display: flex;
+  justify-content: space-between;
+  /*padding: 1px;*/
+  background-color: khaki;
 }
