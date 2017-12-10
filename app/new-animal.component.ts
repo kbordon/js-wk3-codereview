@@ -56,9 +56,14 @@ import { Animal } from './animal.model';
     <p class="button" (click)="submitForm(animalSpecies.value,animalName.value,animalAge.value,animalSex,animalDiet,animalLocation.value,animalCaretakers.value,animalLikes.value,animalDislikes.value, animalImg.value); exitForm(); getConfirm(animalName.value); animalSpecies.value='';animalName.value='';animalAge.value='';animalSex='';animalDiet='';animalLocation.value='';animalCaretakers.value='';animalLikes.value='';animalDislikes.value='';animalImg.value='';">SAVE</p>
   </div>
   <div class="confirm-focus" *ngIf="newAnimalConfirm">
-    <h3>{{newAnimalConfirm}}</h3>
-    <p>has been added!</p>
-    <p (click)="newAnimalConfirm = null">OK</p>
+    <div class="form-top">
+      <h2>ADD SUCCESSFUL</h2>
+      <p class="button-close" (click)="newAnimalConfirm = null">X</p>
+    </div>
+    <div class="confirm-body">
+      <p><strong>{{newAnimalConfirm}}</strong> has been added!</p>
+    </div>
+    <p class="button" (click)="newAnimalConfirm = null">OK</p>
   </div>
   `
 })

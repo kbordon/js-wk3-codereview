@@ -10,7 +10,7 @@ import { Animal } from './animal.model';
         <h2>There are no animals that match your specifications.</h2>
         <p>Adjust your filters appropriately.</p>
       </div>
-        <div *ngIf="currentAnimal.name" class="animal-text">
+        <div *ngIf="currentAnimal.name || currentAnimal.species" class="animal-text">
           <p class="edit-button" (click)="editButtonClicked(currentAnimal)"><i class="tiny material-icons">edit</i>edit</p>
           <h2>{{currentAnimal.name}}</h2>
           <p><span>Species:</span> {{currentAnimal.species}}</p>

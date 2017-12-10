@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Marcellus+SC');
+@import url('https://fonts.googleapis.com/css?family=Poppins|Raleway');
 html {
   height: 100vh;
 }
@@ -10,16 +10,17 @@ body {
   background-attachment: fixed;
   height: 100vh;
   width: 100vw;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Marcellus SC', serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 h1{
   font-size: 80px;
   text-shadow: 1px 1px 3px gold;
+  margin-bottom: 0;
   /*text-shadow: ;*/
 }
 
@@ -64,7 +65,7 @@ h1{
 
 .animal-text h2 {
   margin: 0px;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .animal-text p{
@@ -115,7 +116,6 @@ h1{
   border-bottom: 10px solid lightgray;
   border-right: 10px solid lightgray;*/
   width: 50%;
-  resize: both;
   overflow: auto;
   filter: grayscale(0%);
   display: flex;
@@ -124,7 +124,6 @@ h1{
 }
 
 .form-focus h2 {
-  text-align: center;
   font-size: 30px;
   letter-spacing: 2px;
   margin: 0;
@@ -136,7 +135,7 @@ h1{
   margin-bottom: 5px;
 }
 
-.form-focus .button {
+.form-focus .button, .confirm-focus .button {
   align-self: center;
 }
 
@@ -199,7 +198,7 @@ h1{
 
 .filter-form {
   width: 250px;
-  margin: 0 10px;
+  margin: 30px 10px;
   padding: 25px;
   background-color: rgba(240,230,140, 0.95);
 }
@@ -234,22 +233,30 @@ h1{
 }
 
 .confirm-focus {
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   top: 10%;
   left: 25%;
   background-color: white;
   padding: 20px;
-  border-radius: 10px;
-  border-top: 10px solid gray;
+  border: 10px solid white;
+  /*border-top: 10px solid gray;
   border-left: 10px solid gray;
   border-bottom: 10px solid lightgray;
-  border-right: 10px solid lightgray;
+  border-right: 10px solid lightgray;*/
   width: 50%;
-  min-height: 40%;
+  overflow: auto;
   filter: grayscale(0%);
-  transition: top 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 50px rgba(0,0,0,0.6), -5px -5px 50px rgba(0,0,0,0.6);
+}
 
+.confirm-focus h2 {
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin: 0;
+  margin-left: 20px;
 }
 
 .error-box {
@@ -275,6 +282,13 @@ span {
   /*justify-content: flex-start;*/
 }
 
+.confirm-body {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font: 20px;
+  align-items: center;
+}
 .form-top {
   display: flex;
   justify-content: space-between;
