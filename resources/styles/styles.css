@@ -115,7 +115,6 @@ h1{
   border-bottom: 10px solid lightgray;
   border-right: 10px solid lightgray;
   width: 50%;
-  height: auto;
   resize: both;
   overflow: auto;
   filter: grayscale(0%);
@@ -130,6 +129,10 @@ h1{
 
 .form-focus .button {
   align-self: center;
+}
+
+.form-focus input {
+  font-size: 18px;
 }
 .button {
   width: 150px;
