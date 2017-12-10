@@ -31,7 +31,7 @@ export class AppComponent {
   viewUnFocus = null;
 
   addAnimal(newAnimalFromChild){
-    this.masterAnimalList.push(newAnimalFromChild);
+    this.masterAnimalList.unshift(newAnimalFromChild);
   }
 
   editAnimal(clickedAnimal){
